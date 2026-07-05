@@ -1,0 +1,279 @@
+        /* ==========================================================================
+           1. Core Base Structural Configurations & Resets
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         
+        body {
+            font-family: 'Oswald', 'Arial', sans-serif;
+            background: #ffffff;
+            color: #222222;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================================================
+           2. Navbar Desktop & Mobile Systems Layout
+           ========================================================================== */
+        .main-header {
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,.08);
+            position: relative;
+            z-index: 3000; 
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: auto;
+            height: 65px; 
+            max-width: 160px;
+            object-fit: contain; 
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            height: 3px;
+            width: 100%;
+            background-color: #222222;
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #222222;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links .active {
+            color: #b68b5f;
+        }
+
+
+            
+        /* ==========================================================================
+           6. Footer Layout Module Styles
+/* ==========================================================================
+   6. Complete 3-Column Advanced Footer Styling
+   ========================================================================== */
+.footer {
+    width: 100%;
+    background: #232323;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 20px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 40px 0;
+    gap: 40px; /* Uniform horizontal columns layout distribution gap spacing grid limits */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.store {
+    margin-bottom: 25px;
+}
+
+.store h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #cfcfcf;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contact information styles overrides logic anchors */
+.footer-column.contact p {
+    font-size: 15px;
+    color: #d7b082;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-column .follow {
+    margin-top: 40px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b78b5d;
+    color: #b78b5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.social-icons a:hover {
+    background: #b78b5d;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Bottom panel layout settings container adjustments */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 25px 0;
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #b5b5b5;
+    font-size: 13px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.footer-bottom a {
+    color: #d7b082;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Sticky top back button layout adjustments rule settings anchors */
+.top-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 42px;
+    height: 42px;
+    background: #c9a174;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    z-index: 2900;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.top-btn:hover {
+    background: #b78b5d;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   7. Advanced Responsive Breakpoints Integration Rules 
+   ========================================================================== */
+@media (max-width: 950px) {
+    .footer-container {
+        flex-direction: column; /* Columns automatically align vertically under tablet widths */
+        gap: 30px;
+        padding: 50px 0 30px 0;
+    }
+    
+    .store h3 {
+        margin-top: 0 !important;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .time {
+        font-size: 12px;
+    }
+}
+

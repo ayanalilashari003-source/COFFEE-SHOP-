@@ -1,0 +1,207 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+}
+
+/* ===========================
+   Banner
+=========================== */
+
+.banner{
+    position:relative;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.banner .overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.2);
+}
+
+.banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    z-index:2;
+}
+
+.banner-content h1{
+    color:#fff;
+    font-size:70px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-shadow:0 4px 10px rgba(0,0,0,.5);
+}
+
+/* ===========================
+   Tea Section
+=========================== */
+
+.tea-section{
+    width:100%;
+    padding:50px 8%;
+}
+
+/* ===========================
+   Filter Buttons
+=========================== */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:50px;
+}
+
+.buttons button{
+    padding:12px 22px;
+    border:1px solid #888;
+    background:#fff;
+    color:#444;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.buttons button:hover,
+.buttons button.active{
+    background:#6b3f7d;
+    color:#fff;
+    border-color:#6b3f7d;
+}
+
+/* ===========================
+   Product Grid
+=========================== */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:60px;
+}
+
+.card{
+    text-align:center;
+}
+
+.card img{
+    width:170px;
+    height:260px;
+    object-fit:contain;
+}
+
+.card h3{
+    margin-top:15px;
+    color:#5b2b79;
+    font-size:22px;
+    font-weight:500;
+}
+
+.hide{
+    display:none;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1200px){
+
+.banner{
+    height:360px;
+}
+
+.banner-content h1{
+    font-size:60px;
+}
+
+}
+
+@media(max-width:992px){
+
+.banner{
+    height:320px;
+}
+
+.banner-content h1{
+    font-size:50px;
+}
+
+.products{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.card img{
+    width:150px;
+}
+
+}
+
+@media(max-width:768px){
+
+.banner{
+    height:260px;
+}
+
+.banner-content h1{
+    font-size:40px;
+}
+
+.tea-section{
+    padding:40px 20px;
+}
+
+.buttons button{
+    width:100%;
+}
+
+.products{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    width:180px;
+}
+
+}
+
+@media(max-width:480px){
+
+.banner{
+    height:220px;
+}
+
+.banner-content h1{
+    font-size:30px;
+}
+
+}

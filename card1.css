@@ -1,0 +1,141 @@
+/* Sirf Store Container ke liye Reset aur Settings (Baaki page kharab nahi hoga) */
+.store-container,
+.store-container * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Box */
+.store-container {
+    width: 100%;
+    max-width: 450px; 
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Search Section */
+.store-container .search-section {
+    padding: 15px;
+}
+
+.store-container .search-section h3 {
+    color: #4a1525;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.store-container .search-box {
+    display: flex;
+    border: 1px solid #ccc;
+}
+
+.store-container .search-box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #666;
+    background: transparent;
+}
+
+.store-container .search-box button {
+    background-color: #4a1525;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Stores Bar */
+.store-container .stores-bar {
+    background-color: #4a1525;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.store-container .print-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Store List Items */
+.store-container .store-list {
+    max-height: 500px; 
+    overflow-y: auto;
+}
+
+.store-container .store-item {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* Agar baaki page center ho, toh yeh text left par hi rahe */
+}
+
+.store-container .store-item:last-child {
+    border-bottom: none;
+}
+
+.store-container .store-title {
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.store-container .store-details p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+.store-container .icon {
+    width: 20px;
+    color: #666;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+/* Directions Button */
+.store-container .directions-btn {
+    background-color: #4a1525;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.store-container .directions-btn:hover {
+    background-color: #330e19;
+}
+
+/* Responsive Micro-adjustments */
+@media (max-width: 360px) {
+    .store-container .desktop-text {
+        display: none; 
+    }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="navbarcofee.css"> -->
+ <link rel="stylesheet" href="navbar1.css">
+<link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="new_logo.png" alt="Coffee Logo">
+            </div>
+
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a class="active" href="index .html">HOME</a></li>
+                <li><a href="coffee.html">COFFEE</a></li>
+                <li><a href="tea.html">TEA</a></li>
+                <li><a href="cakes-to-go.html">CAKES TO GO</a></li>
+                <li><a href="cafe-menu.html">CAFE MENU</a></li>
+                <li><a href="ourstores.html">OUR STORES</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1 class="hero-title">COFFEE</h1>
+        </div>
+    </section>
+
+    <nav class="filter-container">
+        <ul class="filter-list">
+            <li><a href="#" class="filter-item btn-all active" data-filter="all" data-image="about images/Colombia-Antioquia-8oz-550x550.jpg">All</a></li>
+            <li><a href="#" class="filter-item btn-light-dist" data-filter="btn-light-dist" data-image="about images/Colombia-Antioquia-8oz-550x550.jpg">Light & Distinctive</a></li>
+            <li><a href="#" class="filter-item btn-rich-smooth" data-filter="btn-rich-smooth" data-image="about images/100-Kona-Coffee-8oz-550x550.jpg">Rich & Smooth</a></li>
+            <li><a href="#" class="filter-item btn-reserved" data-filter="btn-reserved" data-image="about images/Papua-New-Guinea-Sigri-Coffee-8oz-550x550.jpg">Reserved</a></li>
+            <li><a href="#" class="filter-item btn-light-subtle" data-filter="btn-light-subtle" data-image="about images/Mocha-Java-Coffee-8oz-550x550.jpg">Light & Subtle</a></li>
+            <li><a href="#" class="filter-item btn-decaf" data-filter="btn-decaf" data-image="about images/Kenya-AA-Coffee-8oz-550x550.jpg">Decaffeinated</a></li>
+            <li><a href="#" class="filter-item btn-flavoured" data-filter="btn-flavoured" data-image="about images/Costa-Rica-La-Cascada-Tarrazu-Coffee-8oz-550x550.jpg">Flavoured Coffee</a></li>
+            <li><a href="#" class="filter-item btn-dark-dist" data-filter="btn-dark-dist" data-image="about images/Mocha-Java-Coffee-8oz-550x550.jpg">Dark & Distinctive</a></li>
+            <li><a href="#" class="filter-item btn-medium-smooth" data-filter="btn-medium-smooth" data-image="about images/Mocha-Java-Coffee-8oz-550x550.jpg">Medium & Smooth</a></li>
+        </ul>
+    </nav>
+
+    <div class="dynamic-filter-banner" style="text-align: center; margin: 20px auto; max-width: 400px;">
+        <img id="filter-display-image" src="about images/Colombia-Antioquia-8oz-550x550.jpg" alt="Filter Status" style="width: 100%; height: auto; border-radius: 4px; display: block;">
+    </div>
+
+    <main class="products-section">
+        <div class="products-grid">
+            
+            <div class="product-card" data-category="btn-light-dist">
+                <div class="product-image-container">
+                    <img src="about images/Colombia-Antioquia-8oz-550x550.jpg" alt="Colombia Antioquia" class="product-image">
+                </div>
+                <h3 class="product-title">Colombia Antioquia (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-rich-smooth" id="nnn">
+                <div class="product-image-container">
+                    <img src="about images/100-Kona-Coffee-8oz-550x550.jpg" alt="100% Kona Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">100% Kona Coffee (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-reserved">
+                <div class="product-image-container">
+                    <img src="about images/Papua-New-Guinea-Sigri-Coffee-8oz-550x550.jpg" alt="Papua New Guinea Sigri Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Papua New Guinea Sigri Coffee (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-light-subtle">
+                <div class="product-image-container">
+                    <img src="about images/Mocha-Java-Coffee-8oz-550x550.jpg" alt="Mocha Java Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Mocha Java Coffee (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-decaf">
+                <div class="product-image-container">
+                    <img src="about images/Kenya-AA-Coffee-8oz-550x550.jpg" alt="Kenya AA Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Kenya AA Coffee (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-flavoured">
+                <div class="product-image-container">
+                    <img src="about images/Costa-Rica-La-Cascada-Tarrazu-Coffee-8oz-550x550.jpg" alt="Costa Rica La Minita Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Costa Rica La Minita Coffee (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-dark-dist">
+                <div class="product-image-container">
+                    <img src="about images/Mocha-Java-Coffee-8oz-550x550.jpg" alt="Mocha Java Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Dark Blend Special (8oz)</h3>
+            </div>
+
+            <div class="product-card" data-category="btn-medium-smooth">
+                <div class="product-image-container">
+                    <img src="about images/Mocha-Java-Coffee-8oz-550x550.jpg" alt="Mocha Java Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Medium Roast Premium (8oz)</h3>
+            </div>
+
+
+                        <div class="product-card" data-category="btn-medium-smooth">
+                <div class="product-image-container">
+                    <img src="about images/Mocha-Java-Coffee-8oz-550x550.jpg" alt="Mocha Java Coffee" class="product-image">
+                </div>
+                <h3 class="product-title">Medium Roast Premium (8oz)</h3>
+            </div>
+
+        </div>
+    </main>
+    <!-- ==========================
+            FOOTER START
+    =========================== -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1: Opening Hours (Islamabad, Rawalpindi, Lahore) -->
+            <div class="footer-column">
+                <h2>OPENING HOURS</h2>
+
+                <div class="store">
+                    <h3>F-6 , F-11, ELYSIUM MALL & I-8 ISLAMABAD</h3>
+                    <div class="time">
+                        <span>MONDAY - FRIDAY</span>
+                        <span>8AM - 1AM</span>
+                    </div>
+                    <div class="time">
+                        <span>SATURDAY - SUNDAY</span>
+                        <span>9AM - 1AM</span>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <h3>BAHRIA TOWN, RAWALPINDI</h3>
+                    <div class="time">
+                        <span>SUNDAY - THURSDAY</span>
+                        <span>8AM - 1AM</span>
+                    </div>
+                    <div class="time">
+                        <span>FRIDAY - SATURDAY</span>
+                        <span>9AM - 1AM</span>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <h3>PACKAGES MALL, LAHORE</h3>
+                    <div class="time">
+                        <span>MONDAY - THURSDAY</span>
+                        <span>10:30AM - 11PM</span>
+                    </div>
+                    <div class="time">
+                        <span>FRIDAY - SUNDAY</span>
+                        <span>10:30AM - 12AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Cities (Gujranwala, Sialkot, Karachi) -->
+            <div class="footer-column">
+                <div class="store" style="margin-top: 67px;"> <!-- Header offset alignment for clean design -->
+                    <h3>GUJRANWALA</h3>
+                    <div class="time">
+                        <span>MONDAY - SUNDAY</span>
+                        <span>8AM - 1AM</span>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <h3>SIALKOT</h3>
+                    <div class="time">
+                        <span>MONDAY - FRIDAY</span>
+                        <span>8AM - 1AM</span>
+                    </div>
+                    <div class="time">
+                        <span>SATURDAY - SUNDAY</span>
+                        <span>9AM - 1AM</span>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <h3>DHA PHASE 6 & MARINE TOWER KARACHI</h3>
+                    <div class="time">
+                        <span>MONDAY - FRIDAY</span>
+                        <span>8AM - 1AM</span>
+                    </div>
+                    <div class="time">
+                        <span>SATURDAY - SUNDAY</span>
+                        <span>9AM - 1AM</span>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <h3>TIPU SULTAN, KARACHI</h3>
+                    <div class="time">
+                        <span>MONDAY - FRIDAY</span>
+                        <span>8AM - 1AM</span>
+                    </div>
+                    <div class="time">
+                        <span>SATURDAY - SUNDAY</span>
+                        <span>9AM - 1AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Contact & Social Handles -->
+            <div class="footer-column contact">
+                <h2>CONTACT</h2>
+                <p>info@coffeebean.pk</p>
+                <p>0302 5455448</p>
+
+                <h2 class="follow">FOLLOW</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright Panels -->
+        <div class="footer-bottom">
+            <p>The Coffee Bean & Tea Leaf - Pakistan Owned and Operated by Ab Brands Pvt Ltd</p>
+            <p>Powered by Interactive Group © 2019 All rights reserved | <a href="#">Privacy Policy</a></p>
+        </div>
+
+        <!-- Fixed Scroll Back To Top Button Layout -->
+        <a href="#" class="top-btn">↑</a>
+    </footer>
+
+    <!-- Font Awesome Link Integration Essential for Social Icons Grid Rendering -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Mobile Hamburger Menu Toggle Action
+            const mobileMenuButton = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+
+            if (mobileMenuButton && navList) {
+                mobileMenuButton.addEventListener('click', function(e) {
+                    e.stopPropagation(); 
+                    navList.classList.toggle('show-menu');
+                    mobileMenuButton.classList.toggle('is-active');
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!navList.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                        navList.classList.remove('show-menu');
+                        mobileMenuButton.classList.remove('is-active');
+                    }
+                });
+            }
+
+            // 2. Coffee Product Card Filter Logic System
+            const filterButtons = document.querySelectorAll('.filter-item');
+            const coffeeCards = document.querySelectorAll('.product-card');
+            const targetDisplayImage = document.getElementById('filter-display-image');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault(); 
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const newImagePath = this.getAttribute('data-image');
+                    if (targetDisplayImage && newImagePath) {
+                        targetDisplayImage.src = newImagePath;
+                    }
+
+                    const targetFilter = this.getAttribute('data-filter');
+                    coffeeCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (targetFilter === 'all' || cardCategory === targetFilter) {
+                            card.style.display = 'flex'; 
+                        } else {
+                            card.style.display = 'none'; 
+                        }
+                    });
+});});});
+</script>
+</body>
+</html>

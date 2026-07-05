@@ -1,0 +1,247 @@
+/* ==========================
+      Cake Banner
+========================== */
+
+.cake-banner .cake-img{
+    width:100%;
+    height:450px;
+    background:#edf5f9;
+    position:relative;
+    overflow:hidden;
+}
+
+/* {
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:450px;
+    height:auto;
+    max-width:none;
+} */
+
+.cake-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.cake-content h1{
+    font-size:80px;
+    color:#5a2a78;
+    font-family:'Oswald',sans-serif;
+    text-shadow:0 5px 10px rgba(0,0,0,.25);
+}
+/* ==========================
+      Responsive
+========================== */
+
+@media(max-width:992px){
+
+.cake-banner{
+    height:400px;
+}
+
+.cake-img{
+    width:280px;
+}
+
+.cake-content h1{
+    font-size:60px;
+}
+
+}
+
+@media(max-width:768px){
+
+.cake-banner{
+    height:320px;
+}
+
+.cake-img{
+    width:220px;
+}
+
+.cake-content h1{
+    font-size:45px;
+    text-align:center;
+}
+
+}
+
+@media(max-width:576px){
+
+.cake-banner{
+    height:250px;
+}
+
+.cake-img{
+    width:170px;
+}
+
+.cake-content h1{
+    font-size:30px;
+}
+
+}
+
+
+/* card section */
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+}
+
+/* ==========================
+   Cake Section
+========================== */
+
+.cake-section{
+    width:100%;
+    padding:50px 8%;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.buttons button{
+    padding:12px 22px;
+    border:1px solid #777;
+    background:#fff;
+    color:#444;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.buttons button.active,
+.buttons button:hover{
+    background:#5c2c73;
+    color:#fff;
+    border-color:#5c2c73;
+}
+
+/* ==========================
+   Products
+========================== */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.card{
+    text-align:center;
+    transition:.4s;
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+}
+
+.card h3{
+    margin-top:18px;
+    color:#5c2c73;
+    font-size:24px;
+    font-weight:500;
+}
+
+.hide{
+    display:none;
+}
+
+/* ==========================
+   Hover Effect
+========================== */
+
+.card{
+    overflow:hidden;
+}
+
+.card img{
+    transition:.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card:hover h3{
+    color:#7b3697;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.products{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.card img{
+    height:300px;
+}
+
+}
+
+@media(max-width:768px){
+
+.cake-section{
+    padding:40px 20px;
+}
+
+.products{
+    grid-template-columns:1fr;
+}
+
+.buttons button{
+    width:100%;
+}
+
+.card img{
+    height:280px;
+}
+
+.card h3{
+    font-size:22px;
+}
+
+}
+
+@media(max-width:480px){
+
+.card img{
+    height:240px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+}

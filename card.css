@@ -1,0 +1,220 @@
+        /* ==========================================================================
+           3. Hero Section and Dynamic Content Banners
+           ========================================================================== */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background-image: url('Coffee-Bean-banners-website_homepage_Our-Cafe_800x.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-title {
+            color: #ffffff;
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .filter-container {
+            width: 100%;
+            padding: 25px 15px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .filter-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .filter-item {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: #555555;
+            padding: 10px 18px 10px 40px; 
+            border: 1px solid #cccccc;
+            border-radius: 2px;
+            transition: all 0.2s ease-in-out;
+            font-family: 'Arial', sans-serif;
+            background-repeat: no-repeat;
+            background-position: 12px center; 
+            background-size: 20px 20px; 
+        }
+
+        .filter-item:hover {
+            border-color: #b68b5f;
+            color: #b68b5f;
+        }
+
+        .filter-item.active {
+            background-color: #4a1a52;
+            border-color: #4a1a52;
+            color: #ffffff;
+        }
+
+        /* Nav Icon Graphics Setup */
+        .btn-all { background-image: url('images/all-coffee.png'); }
+        .btn-light-dist { background-image: url('images/light-distinctive.png'); }
+        .btn-rich-smooth { background-image: url('images/rich-smooth.png'); }
+        .btn-reserved { background-image: url('images/reserved.png'); }
+        .btn-light-subtle { background-image: url('images/light-subtle.png'); }
+        .btn-decaf { background-image: url('images/decaf.png'); }
+        .btn-flavoured { background-image: url('images/flavoured.png'); }
+        .btn-dark-dist { background-image: url('images/dark-distinctive.png'); }
+        .btn-medium-smooth { background-image: url('images/medium-smooth.png'); }
+
+        /* ==========================================================================
+           4. Products Responsive Grid Configuration
+           ========================================================================== */
+        .products-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: block;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            column-gap: 40px;
+            row-gap: 60px;
+            width: 100%;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            animation: fadeInSmooth 0.4s ease-in-out;
+        }
+
+        @keyframes fadeInSmooth {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-image-container {
+            width: 100%;
+            max-width: 200px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 0.95rem;
+            color: #4a3424; 
+            font-weight: 500;
+            line-height: 1.4;
+            margin-top: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* ==========================================================================
+           5. Core Layout Media Overrides
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                height: 80px;
+                width: 90%;
+            }
+
+            .logo img {
+                height: 50px;
+                max-width: 130px;
+            }
+
+            .menu-toggle {
+                display: flex; 
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                flex-direction: column;
+                gap: 0;
+                max-height: 0; 
+                overflow: hidden;
+                display: flex !important;
+                visibility: hidden;
+                transition: max-height 0.35s ease-in-out, visibility 0.35s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+                z-index: 99999 !important; 
+            }
+
+            .nav-links.show-menu {
+                max-height: 450px !important;
+                visibility: visible !important;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: left;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 14px 25px;
+                font-size: 15px;
+                border-bottom: 1px solid #f5f5f5;
+                width: 100%;
+            }
+
+            .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+            .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); background-color: #b68b5f; }
+            .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: #b68b5f; }
+
+            .hero-title { font-size: 2.2rem; }
+            .filter-list { gap: 6px; }
+            .filter-item { font-size: 0.75rem; padding: 8px 12px 8px 30px; background-position: 8px center; background-size: 16px 16px; }
+        }
+
+        @media (max-width: 520px) {
+            .products-grid { grid-template-columns: 1fr; }
+        }
+

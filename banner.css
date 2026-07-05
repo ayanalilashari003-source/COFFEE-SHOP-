@@ -1,0 +1,198 @@
+/* ==========================================================================
+   3. Core Swiper Hero Slider Base Configurations (Desktop Standard View)
+   ========================================================================== */
+.hero-slider {
+    width: 100%;
+    height: 100vh; /* Full screen window depth slider layer view standard */
+    position: relative;
+    overflow: hidden;
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark Overlay sheet for better content text readability constraints */
+.swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1;
+}
+
+/* Slide Content Spacing Rules */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #ffffff;
+    max-width: 80%; /* Content box bounds safe zone defined */
+}
+
+.slide-content h4 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.slide-content h1 {
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.slide-content a {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #b57d4d;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    font-weight: 500;
+}
+
+.slide-content a:hover {
+    background: #ffffff;
+    color: #b57d4d;
+}
+
+/* Navigation System Controls Sizing Layout rules anchors */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff !important;
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Pagination Dot Handles setup mapping updates */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ffffff !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #b57d4d !important;
+    opacity: 1;
+}
+/* ==========================================================================
+   4. Swiper Responsive Overrides (Tablets & Mobile View Tuning)
+   ========================================================================== */
+
+/* Laptop screens aur Medium Tablets (iPad Layout - Width under 992px) */
+@media (max-width: 992px) {
+    .hero-slider {
+        height: 70vh; /* Scaled down layout height dynamically for better view */
+    }
+
+    .slide-content h1 {
+        font-size: 52px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .slide-content h4 {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+}
+
+/* Standard Mobile Devices (Smartphones - Under 768px Width Screens) */
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 60vh; /* Optimized mobile window viewport height safe grid */
+    }
+
+    .slide-content {
+        left: 5%;
+        max-width: 90%;
+    }
+
+    .slide-content h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .slide-content h4 {
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .slide-content a {
+        padding: 12px 30px;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    /* Side indicators hidden on tiny phone boundaries to follow neat view */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+/* Extra Small Phone Displays (Chote Smart Phones - Under 480px Width) */
+@media (max-width: 480px) {
+    .hero-slider {
+        height: 50vh;
+    }
+
+    .slide-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .slide-content h4 {
+        font-size: 13px;
+    }
+
+    .slide-content a {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}

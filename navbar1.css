@@ -1,0 +1,304 @@
+/* ==========================================================================
+   1. Core Resets & Global System Configuration
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: #ffffff;
+    overflow-x: hidden; /* Avoids unwanted horizontal mobile scrolling */
+}
+
+/* ==========================================================================
+   2. Navbar Header & Mobile Toggle Systems Layout
+   ========================================================================== */
+header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.08);
+    position: relative;
+    z-index: 9999;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: auto;
+    height: 60px; /* Secure bounds prevent clipping */
+    max-width: 150px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Hamburger lines button (Mobile frames standard hidden state on desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #222222;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 42px;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.nav-links li a:hover,
+.nav-links .active {
+    color: #b68b5f;
+}
+
+.nav-links::after {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background: #666;
+    margin-left: 10px;
+}
+/* ==========================================================================
+   7. Complete Footer Restored Module Styling
+   ========================================================================== */
+.footer {
+    width: 100%;
+    background: #232323;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    margin-top: 60px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+    gap: 60px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.store {
+    margin-bottom: 35px;
+}
+
+.store h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #d8d8d8;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #d7b082;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.follow {
+    margin-top: 50px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #b78b5d;
+    color: #b78b5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: #b78b5d;
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 25px 0;
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #cfcfcf;
+    font-size: 15px;
+    line-height: 1.8;
+    font-family: Arial, sans-serif;
+}
+
+.footer-bottom a {
+    color: #d7b082;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.top-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    background: #c9a174;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 22px;
+    transition: .3s;
+    z-index: 999;
+}
+
+.top-btn:hover {
+    background: #a97d50;
+}
+
+/* ==========================================================================
+   8. Overriding Mobile/Tablet Breakpoints Fixes
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .gallery-container, .footer-container, .footer-bottom {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-slider { height: 450px; }
+    .slide-content h1 { font-size: 2.8rem; }
+    .about-container { grid-template-columns: repeat(2, 1fr); }
+    .info-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .navbar { height: 80px; width: 90%; }
+    .logo img { height: 50px; max-width: 130px; }
+    .menu-toggle { display: flex; } /* Hamburg button enabled standard */
+
+    /* Fixed mobile panel layout logic */
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0; 
+        overflow: hidden;
+        display: flex !important;
+        visibility: hidden;
+        transition: max-height 0.35s ease-in-out, visibility 0.35s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        z-index: 999999 !important; 
+    }
+
+    .nav-links.show-menu {
+        max-height: 450px !important;
+        visibility: visible !important;
+    }
+
+    .nav-links li { width: 100%; text-align: left; border-bottom: 1px solid #f5f5f5; }
+    .nav-links li a { display: block; padding: 16px 25px; font-size: 15px; width: 100%; }
+    .nav-links::after { display: none !important; }
+
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); background-color: #b68b5f; }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: #b68b5f; }
+
+    .hero-slider { height: 350px; }
+    .slide-content h1 { font-size: 2.2rem; }
+    .slide-content h4 { font-size: 1.1rem; }
+
+    /* Gallery stack to column on mobile frames */
+    .gallery-container { flex-direction: column; }
+    .left-image, .right-images, .image-box { width: 100% !important; height: auto !important; }
+    .left-image img { height: 350px; }
+    .image-box img { height: 200px; }
+
+    .about-container, .info-container { grid-template-columns: 1fr; }
+    .footer-container { flex-direction: column; gap: 40px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .time { flex-direction: column; gap: 5px; }
+}
+
+@media (max-width: 600px) {
+    .footer-column h2 { font-size: 26px; }
+    .store h3 { font-size: 18px; }
+    .contact p, .time, .footer-bottom p { font-size: 14px; }
+    .social-icons a { width: 40px; height: 40px; }
+}

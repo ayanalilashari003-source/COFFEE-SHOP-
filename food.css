@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.beverage-banner{
+    width:100%;
+    height:500px;
+
+    background-image:url("food\ images/foodbenner.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.banner-text h1{
+    font-size:70px;
+    color:#4b1f75;
+    font-weight:900;
+    letter-spacing:3px;
+    text-shadow:3px 3px 8px rgba(0,0,0,.3);
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.beverage-banner{
+    height:400px;
+}
+
+.banner-text h1{
+    font-size:55px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.beverage-banner{
+    height:300px;
+    background-position:center;
+}
+
+.banner-text h1{
+    font-size:38px;
+    text-align:center;
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.beverage-banner{
+    height:220px;
+}
+
+.banner-text h1{
+    font-size:28px;
+}
+
+}
+
+
+/* card  */
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f7f7f7;
+}
+
+/* ==========================
+   Container
+========================== */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:40px auto;
+}
+
+/* ==========================
+   Filter Buttons
+========================== */
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:40px;
+}
+
+.filter-buttons button{
+    padding:12px 20px;
+    border:1px solid #6b2c91;
+    background:#fff;
+    color:#6b2c91;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active{
+    background:#6b2c91;
+    color:#fff;
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+    transition:.4s;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card h3{
+    margin:18px 10px 10px;
+    color:#5d267d;
+    font-size:22px;
+}
+
+.card p{
+    color:#666;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:992px){
+
+.menu{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.card img{
+    height:230px;
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+}
+
+.menu{
+    grid-template-columns:1fr;
+}
+
+.filter-buttons{
+    gap:10px;
+}
+
+.filter-buttons button{
+    width:48%;
+    font-size:15px;
+    padding:10px;
+}
+
+.card img{
+    height:250px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media(max-width:480px){
+
+.filter-buttons button{
+    width:100%;
+}
+
+.card img{
+    height:220px;
+}
+
+.card h3{
+    font-size:18px;
+}
+
+.card p{
+    font-size:16px;
+}
+
+}
